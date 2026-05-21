@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="what-is-llm">
+        <h2>What is an LLM?</h2>
+        <p>LLM stands for Large Language Model.</p>
+        <p>Large Language Model, is a type of artificial intelligence model that has been trained on vast amounts of text data to understand and generate human-like language. These models are designed to process and analyze natural language, allowing them to perform a wide range of tasks such as language translation, text summarization, question answering, and even creative writing.</p>
+        <p>An LLM is a massive neural network trained on huge amounts of text to predict the next token using transformer-based attention mechanisms.</p>
+    
+    <h4>Here are two major real-world LLMs:</h4>
+    <ul>
+        <li>GPT-3</li>
+        <li>PaLM</li>
+    </ul>
+    </section>
+
+    <section id="what-is-token">
+<h2>What is a token?</h2>
+
+ <p>
+    In Large Language Models (LLMs), a token is a small chunk of text that the model reads and processes. 
+    A token is not always a full word. On average, one token is roughly 3–4 characters or about ¾ of a word in English.
+  </p>
+
+  <p>
+    LLMs do not read sentences the same way humans do. Instead, they break text into tokens before processing it. 
+    These tokens can be words, parts of words, punctuation marks, or even spaces.
+  </p>
+
+  <p>
+    Tokens are important because they are the unit used to measure both context windows and pricing. 
+    The context window determines how much information the model can remember in a conversation, while API costs are usually calculated based on the number of input and output tokens.
+  </p>
+
+   <p>
+    Different languages consume tokens differently. English is usually more token-efficient because many English words are common in the model’s vocabulary. 
+    Azerbaijani words are often longer and more complex, so they may be split into more tokens.
+  </p>
+
+    <p>
+    For example, the sentence:
+    "Hello, world!"
+    might be split into tokens like:
+    ["Hello", ",", " world", "!"]
+  </p>
+
+    </section>
+
+    <section  id="comparison">
+        <h2>LLM Comparison</h2>
+
+    <table>
+    <thead>
+        <tr>
+            <th>Model</th>
+            <th>Provider</th>
+            <th>Context Window</th>
+            <th>Input price</th>
+            <th>Output price</th>
+            <th>Reasoning</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>GPT-4o</td>
+            <td>OpenAI</td>
+            <td>128K tokens</td>
+            <td>$5 per 1M tokens</td>
+            <td>$15 per 1M tokens</td>
+            <td>Very strong reasoning, coding, and multimodal capabilities with fast responses.</td>
+        </tr>
+
+        <tr>
+            <td>Claude 3.5 Sonnet</td>
+            <td>Anthropic</td>
+            <td>200K tokens</td>
+            <td>$3 per 1M tokens</td>
+            <td>$15 per 1M tokens</td>
+            <td>Excellent long-context understanding and strong reasoning performance.</td>
+        </tr>
+
+        <tr>
+            <td>Gemini 1.5 Pro</td>
+            <td>Google</td>
+            <td>1M tokens</td>
+            <td>$3.50 per 1M tokens</td>
+            <td>$10.50 per 1M tokens</td>
+            <td>Very large context window with strong multimodal and analytical abilities.</td>
+        </tr>
+
+        <tr>
+            <td>Grok-2</td>
+            <td>xAI</td>
+            <td>128K tokens</td>
+            <td>$2 per 1M tokens</td>
+            <td>$10 per 1M tokens</td>
+            <td>Fast conversational reasoning with strong real-time web integration.</td>
+        </tr>
+    </tbody>
+</table>
+    </section>
+</body>
+</html>
