@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+GB+S+Guides:ital@0;1&display=swap" rel="stylesheet">
 </head>
-<body>
-    <section id="what-is-llm">
+
+    <header>
+      <h1>LLM Dashboard</h1>
+      <nav>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="#what-is-llm">What is an LLM?</a>
+        <a href="#what-is-token">What is a token?</a>
+        <a href="#comparison">LLM Comparison</a>
+      </nav>
+    </header>
+    <section id="what-is-llm">         
         <h2>What is an LLM?</h2>
         <p>LLM stands for Large Language Model.</p>
         <p>Large Language Model, is a type of artificial intelligence model that has been trained on vast amounts of text data to understand and generate human-like language. These models are designed to process and analyze natural language, allowing them to perform a wide range of tasks such as language translation, text summarization, question answering, and even creative writing.</p>
@@ -54,7 +67,7 @@
     <section  id="comparison">
         <h2>LLM Comparison</h2>
 
-    <table>
+  <table>
     <thead>
         <tr>
             <th>Model</th>
@@ -73,7 +86,7 @@
             <td>128K tokens</td>
             <td>$5 per 1M tokens</td>
             <td>$15 per 1M tokens</td>
-            <td>Very strong reasoning, coding, and multimodal capabilities with fast responses.</td>
+            <td><span class="status-yes">✓</span></td>
         </tr>
 
         <tr>
@@ -82,7 +95,7 @@
             <td>200K tokens</td>
             <td>$3 per 1M tokens</td>
             <td>$15 per 1M tokens</td>
-            <td>Excellent long-context understanding and strong reasoning performance.</td>
+            <td><span class="status-yes">✓</span></td>
         </tr>
 
         <tr>
@@ -91,7 +104,7 @@
             <td>1M tokens</td>
             <td>$3.50 per 1M tokens</td>
             <td>$10.50 per 1M tokens</td>
-            <td>Very large context window with strong multimodal and analytical abilities.</td>
+            <td><span class="status-yes">✓</span></td>
         </tr>
 
         <tr>
@@ -100,10 +113,90 @@
             <td>128K tokens</td>
             <td>$2 per 1M tokens</td>
             <td>$10 per 1M tokens</td>
-            <td>Fast conversational reasoning with strong real-time web integration.</td>
+            
+            <td><span class="status-no">✗</span></td>
         </tr>
     </tbody>
 </table>
     </section>
+
+
+<section id="model-cards">
+  <h2>Model Cards</h2>
+  <div class="cards-grid">
+    <div class="card">
+  <div class="card-header">
+    <span class="card-provider">Anthropic</span>
+    <span class="card-reasoning reasoning-yes">Reasoning</span>
+  </div>
+  <h3 class="card-name">Claude Sonnet 4</h3>
+  <p class="card-tagline">Best for complex analysis and long documents</p>
+  <ul class="card-specs">
+    <li><span class="spec-label">Context</span><span class="spec-value">200K</span></li>
+    <li><span class="spec-label">Input</span><span class="spec-value">$3 / 1M</span></li>
+    <li><span class="spec-label">Output</span><span class="spec-value">$15 / 1M</span></li>
+  </ul>
+</div>
+<div class="card">
+  <div class="card-header">
+    <span class="card-provider">OpenAI</span>
+    <span class="card-reasoning reasoning-yes">Reasoning</span>
+  </div>
+  <h3 class="card-name">GPT-4o</h3>
+  <p class="card-tagline">Best for high-speed multimodal tasks and coding</p>
+  <ul class="card-specs">
+    <li><span class="spec-label">Context</span><span class="spec-value">128K</span></li>
+    <li><span class="spec-label">Input</span><span class="spec-value">$5 / 1M</span></li>
+    <li><span class="spec-label">Output</span><span class="spec-value">$15 / 1M</span></li>
+  </ul>
+</div>
+<div class="card">
+  <div class="card-header">
+    <span class="card-provider">Google</span>
+    <span class="card-reasoning reasoning-yes">Reasoning</span>
+  </div>
+  <h3 class="card-name">Gemini 1.5 Pro</h3>
+  <p class="card-tagline">Best for massive datasets and video understanding</p>
+  <ul class="card-specs">
+    <li><span class="spec-label">Context</span><span class="spec-value">1M</span></li>
+    <li><span class="spec-label">Input</span><span class="spec-value">$3.50 / 1M</span></li>
+    <li><span class="spec-label">Output</span><span class="spec-value">$10.50 / 1M</span></li>
+  </ul>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="card-provider">xAI</span>
+    <span class="card-reasoning reasoning-yes">Reasoning</span>
+  </div>
+  <h3 class="card-name">Grok-2</h3>
+  <p class="card-tagline">Best for real-time web search and witty insights</p>
+  <ul class="card-specs">
+    <li><span class="spec-label">Context</span><span class="spec-value">128K</span></li>
+    <li><span class="spec-label">Input</span><span class="spec-value">$2 / 1M</span></li>
+    <li><span class="spec-label">Output</span><span class="spec-value">$10 / 1M</span></li>
+  </ul>
+</div>
+<div class="card">
+  <div class="card-header">
+    <span class="card-provider">Mistral</span>
+    <span class="card-reasoning reasoning-yes">Reasoning</span>
+  </div>
+  <h3 class="card-name">Mistral Large 2</h3>
+  <p class="card-tagline">Best for multilingual support and European compliance</p>
+  <ul class="card-specs">
+    <li><span class="spec-label">Context</span><span class="spec-value">128K</span></li>
+    <li><span class="spec-label">Input</span><span class="spec-value">$2 / 1M</span></li>
+    <li><span class="spec-label">Output</span><span class="spec-value">$6 / 1M</span></li>
+  </ul>
+</div>
+
+
+  </div>
+</section>
+
+
+    <footer>
+        <p>Created by Yaqut</p>
 </body>
 </html>
