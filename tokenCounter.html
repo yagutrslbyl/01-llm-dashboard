@@ -18,14 +18,24 @@
         <a href="tokenCounter.html" class="active">Token Counter</a>
     </nav>
 
-    <main>
-        <section id="tokenCounter">
-            <h2>Token Counter</h2>
-            <p>Paste any English text below to estimate how many tokens it would consume when sent to an AI model.</p>
-            <textarea id="inputText" rows="6" placeholder="Type or paste your text here..."></textarea>
-            <p id="result">Estimated tokens: 0</p>
-        </section>
-    </main>
+  <main>
+  <section id="tokenCounter">
+    <h2>Token Counter</h2>
+    <p>Paste any English text below to estimate how many tokens it would consume when sent to an AI model.</p>
+    
+    <textarea id="inputText" rows="6" placeholder="Type or paste your text here..."></textarea>
+    
+    <div id="stats">
+      <span id="stat-chars">Characters: 0</span>
+      <span id="stat-words">Words: 0</span>
+      <span id="stat-tokens">Estimated tokens: 0</span>
+    </div>
+
+    <button id="save-btn">Save Snapshot</button>
+    <button id="clear-btn">Clear History</button>
+    <ul id="history-list"></ul>
+  </section>
+</main>
 
     <footer>
         <p>&copy; 2026 AI Dashboard Project</p>

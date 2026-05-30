@@ -53,4 +53,65 @@ console.log("500 word email cost ($2.5 per 1M):", estimateCost(countTokens("Bura
 function characterCount(text) {
   return cleanText(text).length;
 }
-console.log("Simvol sayı (boşluqsuz):", characterCount("  Hello  ")); // 5 verməlidir
+console.log("Simvol sayı (boşluqsuz):", characterCount("  Hello  ")); 
+
+
+function analyzeText(text) {
+  const cleaned = cleanText(text);
+  const words = splitIntoWords(cleaned);
+  const filtered = removeEmptyWords(words);
+
+  return {
+    characters: cleaned.length,
+    words: filtered.length,
+    tokens: estimateTokens(filtered)
+  };
+}
+
+const textarea = document.querySelector('#inputText');
+const statChars = document.querySelector('#stat-chars');
+const statWords = document.querySelector('#stat-words');
+const statTokens = document.querySelector('#stat-tokens');
+const saveBtn = document.querySelector('#save-btn');
+const historyList = document.querySelector('#history-list');
+
+const history = [];
+
+textarea.addEventListener('input', function() {
+  const analysis = analyzeText(textarea.value);
+  statChars.textContent  = 'Characters: ' + analysis.characters;
+  statWords.textContent  = 'Words: '      + analysis.words;
+  statTokens.textContent = 'Estimated tokens: ' + analysis.tokens;
+});
+
+saveBtn.addEventListener('click', function() {
+  if (textarea.value.trim() === '') {
+    alert("Please type some text first!");
+    return;
+  }
+
+  const analysis = analyzeText(textarea.value);
+  analysis.label = 'Snapshot ' + (history.length + 1); 
+  
+  history.push(analysis); 
+  renderHistory();        
+});
+
+
+
+function renderHistory() {
+  historyList.innerHTML = '';
+
+  history.forEach(function(entry) {
+    const li = document.createElement('li');
+    li.textContent = entry.label + ': ' + entry.tokens + ' tokens, ' + entry.words + ' words, ' + entry.characters + ' characters';
+    historyList.appendChild(li);
+  });
+}
+
+const clearBtn = document.querySelector('#clear-btn');
+
+clearBtn.addEventListener('click', function() {
+  history.length = 0; 
+    renderHistory();    
+  });
